@@ -7,7 +7,7 @@ The specification for cracklepop are the following:
 Write a program that prints out the numbers 1 to 100 (inclusive). If the number is divisible by 3, print Crackle instead of the number. If it's divisible by 5, print Pop. If it's divisible by both 3 and 5, print CracklePop. You can use any language.
 
 
-The other program is the famous game of fifteen. I had conded a solution in C when for a problem set for a computer science course (CS50), which I tackled again in Python, using a functional paradigm. Here's the specs:
+The other program is the famous game of fifteen. I had coded a [solution in C](https://gist.github.com/gsime1/30e2e2a3dc6f2b216f955626182288c9) for a problem set for a computer science course (CS50), which I tackled again in Python, using a functional paradigm. Here's the specs:
 
 Implement the Game of Fifteen, per the below.
 
