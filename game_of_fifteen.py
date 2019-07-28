@@ -32,7 +32,6 @@ DIM_MAX = 9
 
 def main():
 
-	global DIM
 	if not is_legal_argv(arg_vec=argv, desired_len=2, arg_to_check=1, within_range=[DIM_MIN, DIM_MAX]):
 		exit("Usage: python fifteen.py D.\nThe desired dimension (D) must be a number between {} and {}.".
 		     format(DIM_MIN, DIM_MAX))
@@ -57,12 +56,27 @@ if __name__ == "__main__":
 	main()
 
 
-#########
-# Notes #
-#########
-#        -1- Why do we use global to create the DIM constant?
-#        -2- How does the play() function work?
-#        -3- What is assoc()?
-#        -4- Why are some imports within function def scopes?
-#        -5- What could be improved?
+############
+# Learning #
+############
+#        -1- How does the play() function work?
+#            play() argument is a dictionary containing the elements defining the state at each step of the game.
+#            The function draws the board, checks if the user has won first and, if not, it recurses with the results of
+#            run_step_of_the_game(). This is an example of a functional solution to the specifications, where the only
+#            variable (technically a constant) instantiated outside the function is DIM, and all changes to the state
+#            variables are done in nested functions or return values.
+#        -2- What is assoc()?
+#            assoc() makes sure that when we want to mutate a 2D array, we do not touch the original object but we use
+#            deepcopy to create and return a copy of the original object, muted.
+#        -3- Why are some imports within function def scopes?
+#            Some functions have an import statement within their scope to avoid "polluting" the global namespace.
+#            Moreover keeping the supporting imports within the function's scope allows us to use function for other
+#            future programs without worrying about their imports. For such a tiny program the impact of performance is
+#            negligible.
+#        -4- What could be improved?
+#            The following features could be added:
+#            a. The user has to quit typing "ctrl+c". A quit instruction could be added, like "to quit press 0".
+#               This would mean adding a keyboard listener (like pyinput).
+#            b. We could also add a solve() function, for the use to be able to see how the puzzle is solved live
+#               using the BSF algorithm.
 #

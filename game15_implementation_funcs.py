@@ -4,12 +4,18 @@ from supporting_funcs import create_2d_array
 
 @clear_terminal_before_func
 def greet_user():
-
+	"""
+	func greeting user and giving instructions. Decorated to clear the console before greeting.
+	:return: None.
+	"""
 	from os import uname
 
-	print("""Hello {}! Welcome to the game of 15.
-	The game consists of ....""".format(uname()[1]))
-	return None
+	return print("""Hello {} from the Recurse Centre!\n
+	WELCOME TO THE GAME OF FIFTEEN\n
+	The game is very simple, you just have to choose the tile you want to swap with the empty tile [_] and move them 
+	until the board, which is now upside down, starts again with [1] [2] [3] ... and ends with the empty tile [_].\n
+	Can you do it?\n 
+	Try! The board is here below, choose your first move!\n\n""".format(uname()[1]))
 
 
 def initialise_board(dim):
