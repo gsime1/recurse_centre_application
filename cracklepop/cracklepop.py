@@ -32,9 +32,9 @@ if __name__ == "__main__":
 	main()
 
 
-#########
-# Notes #
-#########
+############
+# Learning #
+############
 #        -1- Why don't we use print("Crackle") in the short-circuited expressions?
 #            Because then the rightmost element of the expressions would return None which, being falsy,
 #            would mess up our conditions.
