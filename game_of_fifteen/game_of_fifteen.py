@@ -77,5 +77,5 @@ if __name__ == "__main__":
 #            a. The user has to quit typing "ctrl+c". A quit instruction could be added, like "to quit press 0".
 #               This would mean adding a keyboard listener (could use pyinput library).
 #            b. We could also add a solve() function linked to a certain key stroke. For example if the user gets bored
-#               and wants to the the puzzle solving itself live in front of their eyes they could press "s" for solve,
+#               and wants to see the puzzle solving itself live in front of their eyes they could press "s" for solve,
 #               and the puzzle would solve itself live using the BSF algorithm.
