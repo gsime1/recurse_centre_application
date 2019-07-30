@@ -45,7 +45,7 @@ if __name__ == "__main__":
 #            3rd expression: (10 % 5 == 0) and and print(10) -> True and None+sideEffect
 #            4th expression: print(10) -> None+sideEffect
 #
-#            3rd and 4th expressions would print to console.
+#            1st and 2nd expressions would stop at the (!), 3rd and 4th expressions would print to console.
 
 #            >>> cracklepop(10)
 #            >>> Pop
