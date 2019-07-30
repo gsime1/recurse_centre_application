@@ -1,10 +1,10 @@
 ## How to run
 
 - clone this repo
-- move to `./game_of_fifteen` folder
+- `cd` to `./game_of_fifteen` folder
 - run the following from terminal:
 
-`$ python3 game_of_fifteen.py 4` ( let's use a dimension of 4x4 board)
+`$ python3 game_of_fifteen.py 4` (let's use a dimension of 4x4 board)
 
 what you should see is the following:
 
