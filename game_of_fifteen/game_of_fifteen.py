@@ -61,13 +61,12 @@ if __name__ == "__main__":
 ############
 #        -1- How does the play() function work?
 #            play() argument is a dictionary containing the elements defining the state at each step of the game.
-#            The function draws the board, checks if the user has won first and, if not, it recurses with the results of
-#            run_step_of_the_game(). This is an example of a functional solution to the specifications, where the only
+#            This is an example of a functional solution to the specifications, where the only
 #            variable (technically a constant) instantiated outside the function is DIM, and all changes to the state
-#            variables are done in nested functions or return values.
+#            variables are done in within a single function namespace, not at the module level.
 #        -2- What is assoc()?
 #            assoc() makes sure that when we want to mutate a 2D array, we do not touch the original object but we use
-#            deepcopy to create and return a copy of the original object, muted.
+#            deepcopy to create and return a copy of the original object, mutated.
 #        -3- Why are some imports within function def scopes?
 #            Some functions have an import statement within their scope to avoid "polluting" the global namespace.
 #            Moreover keeping the supporting imports within the function's scope allows us to use function for other
@@ -76,7 +75,7 @@ if __name__ == "__main__":
 #        -4- What could be improved?
 #            The following features could be added:
 #            a. The user has to quit typing "ctrl+c". A quit instruction could be added, like "to quit press 0".
-#               This would mean adding a keyboard listener (like pyinput).
-#            b. We could also add a solve() function, for the use to be able to see how the puzzle is solved live
-#               using the BSF algorithm.
-#
+#               This would mean adding a keyboard listener (could use pyinput library).
+#            b. We could also add a solve() function linked to a certain key stroke. For example if the user gets bored
+#               and wants to the the puzzle solving itself live in front of their eyes they could press "s" for solve,
+#               and the puzzle would solve itself live using the BSF algorithm.
